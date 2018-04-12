@@ -10,6 +10,7 @@ public class DeliveryTest {
 		PizzaShop ps = new PizzaShop();
 		BurgerBude bb = new BurgerBude();
 		DoenerLaden dl = new DoenerLaden();
+		CupcakeShop cs = new CupcakeShop();
 		
 		ds.setCaterer(ps);
 		ds.deliver(42, "WilliAllee73");
@@ -25,6 +26,12 @@ public class DeliveryTest {
 		ds.setCaterer(dl);
 		ds.deliver(42, "WilliAllee73");
 		Assert.assertEquals(dl, ds.getCaterer());
+		
+		ds.setCaterer(cs);
+		ds.deliver(42, "WilliAllee73");
+		Assert.assertEquals(cs, ds.getCaterer());
+		
+		//Der Mehraufwand eine neue Klasse zu implementieren war sehr gering. Lediglich 2 Zeilen Code.
 	}
 	
 }
